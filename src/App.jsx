@@ -1,7 +1,7 @@
 import { useState,useEffect } from 'react'
 import Gun from 'gun'
-const gun = Gun()
-const messagesRef = gun.get('1265111233')
+const gun = Gun(['https://dapp-chat.onrender.com/gun'])
+const messagesRef = gun.get('dapp-126511')
 
 function App() {
  
