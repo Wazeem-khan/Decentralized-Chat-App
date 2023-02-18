@@ -1,4 +1,4 @@
-import DmCard from "./DMCard";
+import DmCard from "./DmCard";
 import { useEffect, useState, useContext } from "react";
 import { AppContext } from "../custom_hooks/context";
 import { AnimatePresence } from "framer-motion";
