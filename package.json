@@ -10,14 +10,22 @@
   },
   "dependencies": {
     "@metamask/onboarding": "^1.0.1",
+    "@sanity/client": "^4.0.1",
+    "@sanity/image-url": "^1.0.2",
+    "bad-words": "^3.0.4",
     "filepond": "^4.30.4",
+    "filepond-plugin-file-validate-size": "^2.2.8",
+    "filepond-plugin-file-validate-type": "^1.2.8",
     "filepond-plugin-image-exif-orientation": "^1.0.11",
     "filepond-plugin-image-preview": "^4.6.11",
     "framer-motion": "^8.5.4",
     "gun": "^0.2020.1239",
+    "moment": "^2.29.4",
+    "perspective-api-client": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-filepond": "^7.1.2",
+    "react-hook-form": "^7.43.1",
     "react-router-dom": "^6.8.0"
   },
   "devDependencies": {
