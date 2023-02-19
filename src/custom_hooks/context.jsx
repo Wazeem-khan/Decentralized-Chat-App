@@ -433,16 +433,15 @@ export const AppProvider = ({ children }) => {
     } catch (error) {
       console.error(error)
     }
-  
     const newMessage = {
       sender: currentUser.name,
       senderWalletAddress: currentUser.wallet_address,
       avatar: currentUser.avatar,
       content: {
-        original: filter.clean(value.trim())+ Date.now(),
+        original: filter.clean(value.trim())+ state['messages'].length,
       },
       createdAt: moment().format("MMM DD hh:mm A"),
-      messageId: Date.now(),
+      messageId: state['messages'].length,
     };
     messageTextRef.current.value = "";
     messagesRef.set(await encryption(newMessage, "encrypt"));
