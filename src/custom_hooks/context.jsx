@@ -129,15 +129,22 @@ export const AppProvider = ({ children }) => {
 
   const fetchAllRooms = async () => {
     try {
-      const query = `*[_type=="users" && wallet_address == '${currentUser.wallet_address}']{
-        "all_rooms": *[_type=='conversations' && references(^._id)]{ 
-          room_name,
-          room_id,
-          "avatar": image.asset->url
-        }
-      }`;
+      // const query = `*[_type=="users" && wallet_address == '${currentUser.wallet_address}']{
+      //   "all_rooms": *[_type=='conversations' && references(^._id)]{ 
+      //     room_name,
+      //     room_id,
+      //     "avatar": image.asset->url
+      //   }
+      // }`;
+      const query = ` *[_type == "conversations" ]{
+        room_name,
+        room_id,
+        "avatar": image.asset->url
+      }`
       const res = await fetchData(query);
-      const data = res[0].all_rooms;
+      //const data = res[0].all_rooms;
+      const data = res;
+      console.log(data)
       setChannels(data);
       data.length > 0 &&
         navigate(`/chat?channel=${data[0].room_name}&id=${data[0].room_id}`, {
@@ -406,7 +413,7 @@ export const AppProvider = ({ children }) => {
         show: true,
       });
     }
-    close();
+    setModalOpen(false);
   };
 
   const sendMessage = async (event) => {

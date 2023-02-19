@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 
 const ConversationList = () => {
   const [query, setQuery] = useState("");
-  const { setModalOpen, modalOpen, motion, channels, fetchAllRooms } =
+  const { alert,setModalOpen, modalOpen, motion, channels, fetchAllRooms } =
     useContext(AppContext);
 
   const filteredItems = channels.filter((channel) => {
