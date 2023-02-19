@@ -422,7 +422,9 @@ export const AppProvider = ({ children }) => {
 
     const _roomId = location.state["id"];
     const messagesRef = gun.get(_roomId);
-
+    let count = 0
+    messagesRef.map().once(()=> count++)
+  
     try {
       const detectProfanity = await perspective.analyze(value.trim());
       const probability = detectProfanity.attributeScores['TOXICITY']['summaryScore']['value'];
@@ -438,10 +440,10 @@ export const AppProvider = ({ children }) => {
       senderWalletAddress: currentUser.wallet_address,
       avatar: currentUser.avatar,
       content: {
-        original: filter.clean(value.trim())+ state['messages'].length,
+        original: filter.clean(value.trim())+ count,
       },
       createdAt: moment().format("MMM DD hh:mm A"),
-      messageId: state['messages'].length,
+      messageId: count,
     };
     messageTextRef.current.value = "";
     messagesRef.set(await encryption(newMessage, "encrypt"));
