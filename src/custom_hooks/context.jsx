@@ -144,7 +144,6 @@ export const AppProvider = ({ children }) => {
       const res = await fetchData(query);
       //const data = res[0].all_rooms;
       const data = res;
-      console.log(data)
       setChannels(data);
       data.length > 0 &&
         navigate(`/chat?channel=${data[0].room_name}&id=${data[0].room_id}`, {
@@ -440,7 +439,7 @@ export const AppProvider = ({ children }) => {
       senderWalletAddress: currentUser.wallet_address,
       avatar: currentUser.avatar,
       content: {
-        original: filter.clean(value.trim()),
+        original: filter.clean(value.trim())+ Date.now(),
       },
       createdAt: moment().format("MMM DD hh:mm A"),
       messageId: Date.now(),
