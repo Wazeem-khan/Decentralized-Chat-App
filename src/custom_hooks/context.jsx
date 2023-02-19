@@ -440,7 +440,8 @@ export const AppProvider = ({ children }) => {
       senderWalletAddress: currentUser.wallet_address,
       avatar: currentUser.avatar,
       content: {
-        original: filter.clean(value.trim()),
+        // original: filter.clean(value.trim()),
+        original: value,
       },
       createdAt: moment().format("MMM DD hh:mm A"),
       messageId: count,
