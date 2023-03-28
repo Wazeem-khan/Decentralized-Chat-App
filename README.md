@@ -20,7 +20,7 @@ interface for users.
 URL - https://decentralized-chat-app-phi.vercel.app
 ## Tech Stack
 
-React.JS, Gun.JS, Tailwind CSS, Framer Motion, Good
+React.JS, Gun.JS, Tailwind CSS, Framer Motion, Google
 Cloud Translation API, Perspective API (ML
 library to identify "toxic" contents),
 MetaMask Wallet Integration, GitHub,
