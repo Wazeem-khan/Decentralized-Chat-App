@@ -32,15 +32,15 @@ const IndexPageLayout = () => {
             </div>
             <div className="pt-5 text-center text-gray-400 text-xs">
               <span>
-                Copyright © 2021-2022
+                Copyright © 2024-2025
                 <a
                   href="#"
                   rel=""
                   target="_blank"
-                  title="Phyo Pyae Sone Han"
+                  title="SLTC"
                   className="text-green hover:text-green-500 ml-1"
                 >
-                  Phyo Han
+                  SLTC
                 </a>
               </span>
             </div>
