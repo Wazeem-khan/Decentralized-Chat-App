@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DecenTalk</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DecenTalk</title>
+  <link rel="icon" type="image/svg+xml" href="/logo.png">
+  <style>
+    /* Your CSS styles here */
+    #root {
+    
+    }
+
+    #google_translate_element {
+      position: absolute;
+      top: 50px;
+      right: 80px;
+      border: 1px solid #09131f;
+      border-radius: 10px;
+      padding: 1px;
+      background-color: #f6f0f5;
+      color: #3d0c0c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    
+  </header>
+  <div id="root">
+    <!-- Your content goes here -->
+  </div>
+  <!-- Google Translate Plugin -->
+  <div id="google_translate_element"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 </html>
-  
